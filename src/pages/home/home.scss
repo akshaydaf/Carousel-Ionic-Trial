@@ -1,0 +1,63 @@
+
+page-home {
+
+    @mixin keyframes($animation-name) {
+        @-webkit-keyframes #{$animation-name} {
+          @content;
+        }
+        @-moz-keyframes #{$animation-name} {
+          @content;
+        }  
+        @-ms-keyframes #{$animation-name} {
+          @content;
+        }
+        @-o-keyframes #{$animation-name} {
+          @content;
+        }  
+        @keyframes #{$animation-name} {
+          @content;
+        }
+      }
+      
+      @mixin animation($str) {
+        -webkit-animation: #{$str};
+        -moz-animation: #{$str};
+        -ms-animation: #{$str};
+        -o-animation: #{$str};
+        animation: #{$str};      
+      }
+      
+      @include keyframes(slide-down) {
+        0% { z-index: 1; }
+        90% { z-index: 4; }
+      }
+    .trial{
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 80%;
+        width: 85%;
+        background-color: teal;
+        h1{
+            color: white;
+        }
+    }
+    .trial2{
+        position: absolute;
+        top: 50%;
+        left: 52%;
+        transform: translate(-50%, -50%);
+        height: 80%;
+        width: 85%;
+        background-color: lightblue;
+        h1{
+            color: white;
+        }
+        //@include animation('slide-down 5s 3');
+
+    }
+
+}
+
+

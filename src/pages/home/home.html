@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle right>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-slides on-slide-changed="slideHasChanged($index)" pager="true" loop="true" centeredSlides="true" slidesPerView="1">
+    <ion-slide>
+      <ion-card class="trial">
+        <h1>BLUE</h1>
+      </ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card class="trial2">
+        <h1>YELLOW</h1>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
